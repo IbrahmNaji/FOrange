@@ -1,0 +1,16 @@
+{
+  "name": "orange-money-reset",
+  "version": "1.0.0",
+  "description": "Training project to simulate Orange Money password reset form using Node.js",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "ejs": "^3.1.10",
+    "express": "^4.21.2"
+  }
+}
