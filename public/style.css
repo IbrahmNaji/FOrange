@@ -1,47 +1,64 @@
 body {
-  font-family: sans-serif;
-  background: #f0f0f0;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
+  font-family: Arial, sans-serif;
+  direction: rtl;
+  background: #fff;
+  padding: 20px;
 }
 
 .container {
-  background: #fff;
-  margin-top: 50px;
-  padding: 20px;
-  width: 90%;
   max-width: 400px;
+  margin: auto;
+  border: 1px solid #ddd;
+  padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 0 10px #ccc;
 }
 
 h1 {
-  text-align: center;
-  margin-bottom: 20px;
+  color: orange;
+  font-size: 24px;
 }
 
-form label {
+label {
   display: block;
-  margin-top: 10px;
+  margin-top: 15px;
+  font-weight: bold;
 }
 
-form input {
+input[type="text"],
+input[type="password"] {
   width: 100%;
   padding: 10px;
   margin-top: 5px;
-  border-radius: 5px;
   border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
-button {
+.remember {
+  margin-top: 15px;
+}
+
+.gray-button {
+  background-color: #ccc;
+  color: #fff;
   width: 100%;
-  padding: 12px;
-  margin-top: 20px;
-  background: #007bff;
-  color: white;
+  padding: 10px;
+  margin-top: 15px;
   border: none;
   border-radius: 5px;
-  font-size: 16px;
+  cursor: not-allowed;
+}
+
+.link,
+.create {
+  display: block;
+  margin-top: 10px;
+  text-align: center;
+  color: #333;
+  text-decoration: underline;
+}
+
+.create {
+  border: 1px solid black;
+  padding: 10px;
+  text-decoration: none;
 }
