@@ -1,97 +1,131 @@
 body {
-  font-family: Tahoma, Arial, sans-serif;
-  direction: rtl;
-  background: #f4f4f4;
+  font-family: Arial, sans-serif;
+  background: #fff;
   margin: 0;
-  padding: 0;
+  padding: 20px;
 }
 
 .container {
   max-width: 400px;
-  margin: 40px auto;
-  background: #fff;
-  padding: 30px 20px;
-  border-radius: 15px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  text-align: center;
+  margin: auto;
 }
 
 .logo {
   width: 60px;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
-h1 {
-  font-size: 20px;
-  margin-bottom: 20px;
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 5px 0;
 }
 
 .orange {
   color: orange;
+}
+
+.subtitle {
+  color: gray;
+  margin-bottom: 20px;
+}
+
+.tabs {
+  display: flex;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 20px;
+}
+
+.tab {
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+  color: gray;
+  cursor: pointer;
   font-weight: bold;
 }
 
-form {
-  text-align: right;
+.tab.active {
+  color: black;
+  border-bottom: 2px solid orange;
 }
 
-label {
+form label {
   display: block;
-  margin: 10px 0 5px;
+  margin-bottom: 5px;
+  margin-top: 15px;
   font-weight: bold;
-  font-size: 14px;
+}
+
+form label span {
+  color: red;
 }
 
 input[type="text"],
 input[type="password"] {
   width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 12px;
+  padding: 10px;
+  font-size: 14px;
   margin-bottom: 10px;
-  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.password-field {
+  position: relative;
+}
+
+.password-field input {
+  width: 100%;
+  padding-right: 40px;
+}
+
+.toggle-eye {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+  color: #888;
 }
 
 .remember {
   display: flex;
   align-items: center;
   margin-top: 10px;
-  margin-bottom: 10px;
 }
 
 .remember input {
-  margin-left: 8px;
+  margin-right: 5px;
 }
 
 .link {
   display: block;
-  color: #0056b3;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  color: #007bff;
   text-decoration: underline;
-  margin-bottom: 15px;
-  text-align: center;
   font-size: 14px;
 }
 
-.blue-button {
-  background-color: #007bff;
-  color: white;
+.gray-button {
   width: 100%;
   padding: 12px;
-  font-size: 16px;
+  background: #ddd;
+  color: #666;
   border: none;
-  border-radius: 12px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: not-allowed;
+}
+
+.outline-button {
+  width: 100%;
+  margin-top: 10px;
+  padding: 12px;
+  background: #fff;
+  color: #000;
+  border: 1px solid black;
+  border-radius: 5px;
+  font-weight: bold;
   cursor: pointer;
-}
-
-.blue-button:hover {
-  background-color: #0056b3;
-}
-
-.create {
-  display: block;
-  margin-top: 15px;
-  text-align: center;
-  font-size: 15px;
-  text-decoration: underline;
-  color: #333;
 }
