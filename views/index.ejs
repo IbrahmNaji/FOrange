@@ -3,26 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>نموذج تسجيل</title>
-  <link rel="stylesheet" href="/style.css">
+  <title>تسجيل الدخول - Orange</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="container">
-    <h1>نموذج تسجيل الدخول</h1>
+    <h1>تسجيل الدخول إلى orange</h1>
     <form action="/submit" method="POST">
-      <label>رقم الهاتف:</label>
-      <input type="text" name="phone" required>
+      <label for="login">البريد الإلكتروني أو رقم أورنج</label>
+      <input type="text" name="login" id="login" placeholder="mail@domain.com أو 077XXXXXXX" required>
 
-      <label>الرقم الوطني:</label>
-      <input type="text" name="national_id" required>
+      <label for="password">كلمة المرور</label>
+      <input type="password" name="password" id="password" required>
 
-      <label>كلمة المرور:</label>
-      <input type="password" name="new_pass" required>
+      <div class="remember">
+        <input type="checkbox" id="remember">
+        <label for="remember" style="display:inline;">تذكرني</label>
+      </div>
 
-      <label>تأكيد كلمة المرور:</label>
-      <input type="password" name="confirm_pass" required>
+      <a href="#" class="link">هل نسيت بيانات الدخول؟</a>
 
-      <button type="submit">إرسال</button>
+      <button class="gray-button" disabled>تسجيل الدخول</button>
+
+      <a href="#" class="create">مستخدم جديد؟ أنشئ حساب</a>
     </form>
   </div>
 </body>
